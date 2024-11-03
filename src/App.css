@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.Padre{
+  background-color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* aplicamos estilos que solo afectan a los hijos directos */
+.Padre >* {
+  box-shadow: 10px 6px 37px slategrey;
+  text-align: center;
+}
+
+.Padre{
+  display: grid;
+  gap: 20px;
+  grid-template: 
+  "hijo1" auto
+  "hijo2" auto
+  "hijo3" auto
+  "hijo4" auto
+  "hijo5" auto  
+  "hijo6" auto  
+  "hijo7" auto  
+  "hijo8" auto  
+  "hijo9" auto;
+}
+.hijo1 { grid-area: hijo1; background-color: #008000; }
+.hijo2 { grid-area: hijo2; background-color: #ff00d0; }
+.hijo3 { grid-area: hijo3; background-color: #f7fb2d; }
+.hijo4 { grid-area: hijo4; background-color: #0519ce; }
+.hijo5 { grid-area: hijo5; background-color: #cbc804; }
+.hijo6 { grid-area: hijo6; background-color: #fb2cea; }
+.hijo7 { grid-area: hijo7; background-color: #00ffff; }
+.hijo8 { grid-area: hijo8; background-color: #19da26; }
+.hijo9 { grid-area: hijo9; background-color: #e59718; }
+
+@media (min-width: 625px) {
+  .Padre {
+    grid-template:
+      "hijo1 hijo1 hijo1 hijo1 hijo1"
+      "hijo3 hijo2 hijo2 hijo2 hijo4"
+      "hijo3 hijo5 hijo5 hijo5 hijo4"
+      "hijo3 hijo6 hijo7 hijo8 hijo4"
+      "hijo9 hijo9 hijo9 hijo9 hijo9"/
+      80px auto auto auto auto;
+  }
+}
